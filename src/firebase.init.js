@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCUb2FKUEQhdAm5ivX4noTfzP7KH8DHrzc",
-  authDomain: "car-services-d4452.firebaseapp.com",
-  projectId: "car-services-d4452",
-  storageBucket: "car-services-d4452.appspot.com",
-  messagingSenderId: "857052248376",
-  appId: "1:857052248376:web:f27fd7c21b0c91a0cca9cd",
+  apiKey: process.env.API_KEY_apiKey,
+  authDomain: process.env.API_KEY_authDomain,
+  projectId: process.env.API_KEY_projectId,
+  storageBucket: process.env.API_KEY_storageBucket,
+  messagingSenderId: process.env.API_KEY_messagingSenderId,
+  appId: process.env.API_KEY_appId,
 };
 
 // Initialize Firebase
