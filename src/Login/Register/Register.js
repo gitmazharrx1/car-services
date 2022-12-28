@@ -2,24 +2,36 @@ import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const nameRef = useRef("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password);
+    console.log(name, email, password);
   };
-  const navigate = useNavigate();
 
-  const handleReg = () => {
-    navigate("/register");
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login");
   };
   return (
     <div className="container w-50 mx-auto">
-      <h1 className="">Please Login!!</h1>
+      <h1 className="">Please Register Your Account!!</h1>
       <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            ref={nameRef}
+            type="text"
+            placeholder="Enter Your Name"
+            required
+          />
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -50,17 +62,17 @@ const Login = () => {
         </Button>
       </Form>
       <p className="mt-3">
-        Don't Have Account?{" "}
+        Already Have Account?{" "}
         <Link
-          to="/register"
+          to="/login"
           className="text-danger pe-auto text-decoration-none"
-          onClick={handleReg}
+          onClick={handleLogin}
         >
-          Register Your Account
+          Login Your Account
         </Link>
       </p>
     </div>
   );
 };
 
-export default Login;
+export default Register;

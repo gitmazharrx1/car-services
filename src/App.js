@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./About/About";
 import Login from "./Login/Login";
 import ServiceDetails from "./ServiceDetails/ServiceDetails";
+import Register from "./Login/Register/Register";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route
           path="/service/:serviceId"
           element={<ServiceDetails></ServiceDetails>}

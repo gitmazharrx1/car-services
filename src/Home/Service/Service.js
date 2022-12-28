@@ -8,7 +8,7 @@ const Service = (props) => {
     navigate(`/service/${id}`);
   };
   return (
-    <div className="col mt-5 border border-dark m-1">
+    <div className="col mt-5 border border-dark m-1 text-center">
       <img src={img} alt="" />
       <h3>{name}</h3>
       <p>{description}</p>

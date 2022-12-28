@@ -7,21 +7,26 @@ const Header = () => {
   return (
     <div>
       <Navbar
+        className="sticky-top"
         collapseOnSelect
-        sticky="top"
         expand="lg"
         bg="dark"
         variant="dark"
       >
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            <img src={logo} width="100px" alt="" />
+            <img
+              href="#carouselExampleCaptions"
+              src={logo}
+              width="100px"
+              alt=""
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Nav.Link href="#services">Services</Nav.Link>
+              <Nav.Link href="#experts">Experts</Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

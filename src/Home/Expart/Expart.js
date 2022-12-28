@@ -20,7 +20,9 @@ const Expart = () => {
   ];
   return (
     <div>
-      <h1 className="mt-5">Our Expert's</h1>
+      <h1 id="experts" className="mt-5 text-center">
+        Our Expert's
+      </h1>
       <div className="row">
         {exparts.map((expert) => (
           <Expert expert={expert}></Expert>
