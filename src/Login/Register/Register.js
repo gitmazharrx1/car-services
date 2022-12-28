@@ -9,7 +9,7 @@ const Register = () => {
   const passwordRef = useRef("");
   const nameRef = useRef("");
   const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
